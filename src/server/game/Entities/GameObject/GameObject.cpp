@@ -543,16 +543,16 @@ void GameObject::Update(uint32 diff) {
 
 			SetGoState(GO_STATE_READY);
 
-			//any return here in case battleground traps
-		}
 
-		if (GetOwnerGUID()) {
-			if (Unit* owner = GetOwner()) {
-				owner->RemoveGameObject(this, false);
-				SetRespawnTime(0);
-				Delete();
-			}
-			return;
+                if (GetGOInfo()->flags & GO_FLAG_NODESPAWN)
+                    return;
+     }
+  
+            if (GetSpellId() || GetOwnerGUID())
+            {
+                SetRespawnTime(0);
+                Delete();
+                return;
 		}
 
 		//burning flags in some battlegrounds, if you find better condition, just add it
