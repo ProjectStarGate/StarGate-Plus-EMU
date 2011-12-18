@@ -264,7 +264,7 @@ bool TileAssembler::calculateTransformedBound(ModelSpawn &spawn) {
 
 	FILE *rf = fopen(modelFilename.c_str(), "rb");
 	if (!rf) {
-		printf("ERROR: Can't open model file: %s\n", modelFilename.c_str());
+		printf("Fehler: Can't open model file: %s\n", modelFilename.c_str());
 		return false;
 	}
 
@@ -368,7 +368,7 @@ bool TileAssembler::convertRawFile(const std::string& pModelFilename) {
 	FILE *rf = fopen(filename.c_str(), "rb");
 
 	if (!rf) {
-		printf("ERROR: Can't open model file in form: %s",
+		printf("Fehler: Can't open model file in form: %s",
 				pModelFilename.c_str());
 		printf("...                          or form: %s", filename.c_str());
 		return false;

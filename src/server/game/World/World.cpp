@@ -1289,7 +1289,7 @@ void World::SetInitialWorldSettings()
 
     ///- Loading strings. Getting no records means core load has to be canceled because no error message can be output.
     sLog->outString();
-    sLog->outString("Loading StarGate strings...");
+    sLog->outString("Lade StarGate strings...");
     if (!sObjectMgr->LoadStarGateStrings())
         exit(1);                                            // Error message displayed in function already
 
@@ -1319,20 +1319,20 @@ void World::SetInitialWorldSettings()
     LoadDB2Stores(m_dataPath);
     DetectDBCLang();
 
-    sLog->outString("Loading Script Names...");
+    sLog->outString("Lade Script Names...");
     sObjectMgr->LoadScriptNames();
 
-    sLog->outString("Loading Instance Template...");
+    sLog->outString("Lade Instance Template...");
     sObjectMgr->LoadInstanceTemplate();
 
-    sLog->outString("Loading SkillLineAbilityMultiMap Data...");
+    sLog->outString("Lade SkillLineAbilityMultiMap Data...");
     sSpellMgr->LoadSkillLineAbilityMap();
 
      // Must be called before `creature_respawn`/`gameobject_respawn` tables
-    sLog->outString("Loading instances...");
+    sLog->outString("Lade instances...");
     sInstanceSaveMgr->LoadInstances();
 
-    sLog->outString("Loading Localization strings...");
+    sLog->outString("Lade Localization strings...");
     uint32 oldMSTime = getMSTime();
     sObjectMgr->LoadCreatureLocales();
     sObjectMgr->LoadGameObjectLocales();
@@ -1347,309 +1347,309 @@ void World::SetInitialWorldSettings()
     sLog->outString(">> Localization strings loaded in %u ms", GetMSTimeDiffToNow(oldMSTime));
     sLog->outString();
 
-    sLog->outString("Loading Page Texts...");
+    sLog->outString("Lade Page Texts...");
     sObjectMgr->LoadPageTexts();
 
-    sLog->outString("Loading Game Object Templates...");     // must be after LoadPageTexts
+    sLog->outString("Lade Game Object Templates...");     // must be after LoadPageTexts
     sObjectMgr->LoadGameobjectInfo();
 
-    sLog->outString("Loading Spell Required Data...");
+    sLog->outString("Lade Spell Required Data...");
     sSpellMgr->LoadSpellRequired();
 
-    sLog->outString("Loading Spell Rank Data...");
+    sLog->outString("Lade Spell Rank Data...");
     sSpellMgr->LoadSpellRanks();
 
-    sLog->outString("Loading Spell Group types...");
+    sLog->outString("Lade Spell Group types...");
     sSpellMgr->LoadSpellGroups();
 
-    sLog->outString("Loading Spell Learn Skills...");
+    sLog->outString("Lade Spell Learn Skills...");
     sSpellMgr->LoadSpellLearnSkills();                        // must be after LoadSpellRanks
 
-    sLog->outString("Loading Spell Learn Spells...");
+    sLog->outString("Lade Spell Learn Spells...");
     sSpellMgr->LoadSpellLearnSpells();
 
-    sLog->outString("Loading Spell Proc Event conditions...");
+    sLog->outString("Lade Spell Proc Event conditions...");
     sSpellMgr->LoadSpellProcEvents();
 
-    sLog->outString("Loading Spell Bonus Data...");
+    sLog->outString("Lade Spell Bonus Data...");
     sSpellMgr->LoadSpellBonusess();
 
-    sLog->outString("Loading Aggro Spells Definitions...");
+    sLog->outString("Lade Aggro Spells Definitions...");
     sSpellMgr->LoadSpellThreats();
 
-    sLog->outString("Loading Spell Group Stack Rules...");
+    sLog->outString("Lade Spell Group Stack Rules...");
     sSpellMgr->LoadSpellGroupStackRules();
 
-    sLog->outString("Loading NPC Texts...");
+    sLog->outString("Lade NPC Texts...");
     sObjectMgr->LoadGossipText();
 
-    sLog->outString("Loading Enchant Spells Proc datas...");
+    sLog->outString("Lade Enchant Spells Proc datas...");
     sSpellMgr->LoadSpellEnchantProcData();
 
-    sLog->outString("Loading Item Random Enchantments Table...");
+    sLog->outString("Lade Item Random Enchantments Table...");
     LoadRandomEnchantmentsTable();
 
-    sLog->outString("Loading Disables");
+    sLog->outString("Lade Disables");
     sDisableMgr->LoadDisables();                             // must be before loading quests and items
 
-    sLog->outString("Loading Items...");                     // must be after LoadRandomEnchantmentsTable and LoadPageTexts
+    sLog->outString("Lade Items...");                     // must be after LoadRandomEnchantmentsTable and LoadPageTexts
     sObjectMgr->LoadItemPrototypes();
 
-    sLog->outString("Loading Item set names...");            // must be after LoadItemPrototypes
+    sLog->outString("Lade Item set names...");            // must be after LoadItemPrototypes
     sObjectMgr->LoadItemSetNames();
 
-    sLog->outString("Loading Creature Model Based Info Data...");
+    sLog->outString("Lade Creature Model Based Info Data...");
     sObjectMgr->LoadCreatureModelInfo();
 
-    sLog->outString("Loading Equipment templates...");
+    sLog->outString("Lade Equipment templates...");
     sObjectMgr->LoadEquipmentTemplates();
 
-    sLog->outString("Loading Creature templates...");
+    sLog->outString("Lade Creature templates...");
     sObjectMgr->LoadCreatureTemplates();
 
-    sLog->outString("Loading Vehicle scaling information...");
+    sLog->outString("Lade Vehicle scaling information...");
     sObjectMgr->LoadVehicleScaling();
 
-    sLog->outString("Loading Reputation Reward Rates...");
+    sLog->outString("Lade Reputation Reward Rates...");
     sObjectMgr->LoadReputationRewardRate();
 
-    sLog->outString("Loading Creature Reputation OnKill Data...");
+    sLog->outString("Lade Creature Reputation OnKill Data...");
     sObjectMgr->LoadReputationOnKill();
 
-    sLog->outString( "Loading Reputation Spillover Data..." );
+    sLog->outString( "Lade Reputation Spillover Data..." );
     sObjectMgr->LoadReputationSpilloverTemplate();
 
-    sLog->outString("Loading Points Of Interest Data...");
+    sLog->outString("Lade Points Of Interest Data...");
     sObjectMgr->LoadPointsOfInterest();
 
-    sLog->outString("Loading Creature Base Stats...");
+    sLog->outString("Lade Creature Base Stats...");
     sObjectMgr->LoadCreatureClassLevelStats();
 
-    sLog->outString("Loading Creature Data...");
+    sLog->outString("Lade Creature Data...");
     sObjectMgr->LoadCreatures();
 
-    sLog->outString("Loading pet levelup spells...");
+    sLog->outString("Lade pet levelup spells...");
     sSpellMgr->LoadPetLevelupSpellMap();
 
-    sLog->outString("Loading pet default spells additional to levelup spells...");
+    sLog->outString("Lade pet default spells additional to levelup spells...");
     sSpellMgr->LoadPetDefaultSpells();
 
-    sLog->outString("Loading Creature Template Addon Data...");
+    sLog->outString("Lade Creature Template Addon Data...");
     sObjectMgr->LoadCreatureAddons();                            // must be after LoadCreatureTemplates() and LoadCreatures()
 
-    sLog->outString("Loading Vehicle Accessories...");
+    sLog->outString("Lade Vehicle Accessories...");
     sObjectMgr->LoadVehicleAccessories();                        // must be after LoadCreatureTemplates()
 
-    sLog->outString("Loading Creature Respawn Data...");         // must be after PackInstances()
+    sLog->outString("Lade Creature Respawn Data...");         // must be after PackInstances()
     sObjectMgr->LoadCreatureRespawnTimes();
 
-    sLog->outString("Loading Creature Linked Respawn...");
+    sLog->outString("Lade Creature Linked Respawn...");
     sObjectMgr->LoadLinkedRespawn();                     // must be after LoadCreatures(), LoadGameObjects()
 
-    sLog->outString("Loading Gameobject Data...");
+    sLog->outString("Lade Gameobject Data...");
     sObjectMgr->LoadGameobjects();
 
-    sLog->outString("Loading Gameobject Respawn Data...");       // must be after PackInstances()
+    sLog->outString("Lade Gameobject Respawn Data...");       // must be after PackInstances()
     sObjectMgr->LoadGameobjectRespawnTimes();
 
-    sLog->outString("Loading Objects Pooling Data...");
+    sLog->outString("Lade Objects Pooling Data...");
     sPoolMgr->LoadFromDB();
 
-    sLog->outString("Loading Weather Data...");
+    sLog->outString("Lade Weather Data...");
     sWeatherMgr->LoadWeatherData();
 
-    sLog->outString("Loading Quests...");
+    sLog->outString("Lade Quests...");
     sObjectMgr->LoadQuests();                                    // must be loaded after DBCs, creature_template, item_template, gameobject tables
 
     sLog->outString("Checking Quest Disables");
     sDisableMgr->CheckQuestDisables();                           // must be after loading quests
 
-    sLog->outString("Loading Quest POI");
+    sLog->outString("Lade Quest POI");
     sObjectMgr->LoadQuestPOI();
 
-    sLog->outString("Loading Quests Relations...");
+    sLog->outString("Lade Quests Relations...");
     sObjectMgr->LoadQuestRelations();                            // must be after quest load
 
-    sLog->outString("Loading Quest Pooling Data...");
+    sLog->outString("Lade Quest Pooling Data...");
     sPoolMgr->LoadQuestPools();
 
-    sLog->outString("Loading Game Event Data...");               // must be after loading pools fully
+    sLog->outString("Lade Game Event Data...");               // must be after loading pools fully
     sGameEventMgr->LoadFromDB();
 
-    sLog->outString("Loading Dungeon boss data...");
+    sLog->outString("Lade Dungeon boss data...");
     sObjectMgr->LoadInstanceEncounters();
 
-    sLog->outString("Loading LFG rewards...");
+    sLog->outString("Lade LFG rewards...");
     sLFGMgr->LoadRewards();
 
-    sLog->outString("Loading UNIT_NPC_FLAG_SPELLCLICK Data...");
+    sLog->outString("Lade UNIT_NPC_FLAG_SPELLCLICK Data...");
     sObjectMgr->LoadNPCSpellClickSpells();
 
-    sLog->outString("Loading SpellArea Data...");            // must be after quest load
+    sLog->outString("Lade SpellArea Data...");            // must be after quest load
     sSpellMgr->LoadSpellAreas();
 
-    sLog->outString("Loading AreaTrigger definitions...");
+    sLog->outString("Lade AreaTrigger definitions...");
     sObjectMgr->LoadAreaTriggerTeleports();
 
-    sLog->outString("Loading Access Requirements...");
+    sLog->outString("Lade Access Requirements...");
     sObjectMgr->LoadAccessRequirements();                        // must be after item template load
 
-    sLog->outString("Loading Quest Area Triggers...");
+    sLog->outString("Lade Quest Area Triggers...");
     sObjectMgr->LoadQuestAreaTriggers();                         // must be after LoadQuests
 
-    sLog->outString("Loading Tavern Area Triggers...");
+    sLog->outString("Lade Tavern Area Triggers...");
     sObjectMgr->LoadTavernAreaTriggers();
 
-    sLog->outString("Loading AreaTrigger script names...");
+    sLog->outString("Lade AreaTrigger script names...");
     sObjectMgr->LoadAreaTriggerScripts();
 
-    sLog->outString("Loading AreaTrigger Quest start...");
+    sLog->outString("Lade AreaTrigger Quest start...");
     sObjectMgr->LoadAreaTriggerQuestStart();
 
-    sLog->outString("Loading Graveyard-zone links...");
+    sLog->outString("Lade Graveyard-zone links...");
     sObjectMgr->LoadGraveyardZones();
 
-    sLog->outString("Loading spell pet auras...");
+    sLog->outString("Lade spell pet auras...");
     sSpellMgr->LoadSpellPetAuras();
 
-    sLog->outString("Loading spell extra attributes...");
+    sLog->outString("Lade spell extra attributes...");
     sSpellMgr->LoadSpellCustomAttr();
 
-    sLog->outString("Loading Spell target coordinates...");
+    sLog->outString("Lade Spell target coordinates...");
     sSpellMgr->LoadSpellTargetPositions();
 
-    sLog->outString("Loading enchant custom attributes...");
+    sLog->outString("Lade enchant custom attributes...");
     sSpellMgr->LoadEnchantCustomAttr();
 
-    sLog->outString("Loading linked spells...");
+    sLog->outString("Lade linked spells...");
     sSpellMgr->LoadSpellLinked();
 
-    sLog->outString("Loading Player Create Data...");
+    sLog->outString("Lade Player Create Data...");
     sObjectMgr->LoadPlayerInfo();
 
-    sLog->outString("Loading Exploration BaseXP Data...");
+    sLog->outString("Lade Exploration BaseXP Data...");
     sObjectMgr->LoadExplorationBaseXP();
 
-    sLog->outString("Loading Pet Name Parts...");
+    sLog->outString("Lade Pet Name Parts...");
     sObjectMgr->LoadPetNames();
 
     CharacterDatabaseCleaner::CleanDatabase();
 
-    sLog->outString("Loading the max pet number...");
+    sLog->outString("Lade the max pet number...");
     sObjectMgr->LoadPetNumber();
 
-    sLog->outString("Loading pet level stats...");
+    sLog->outString("Lade pet level stats...");
     sObjectMgr->LoadPetLevelInfo();
 
-    sLog->outString("Loading Player Corpses...");
+    sLog->outString("Lade Player Corpses...");
     sObjectMgr->LoadCorpses();
 
-    sLog->outString("Loading Player level dependent mail rewards...");
+    sLog->outString("Lade Player level dependent mail rewards...");
     sObjectMgr->LoadMailLevelRewards();
 
     // Loot tables
     LoadLootTables();
 
-    sLog->outString("Loading Skill Discovery Table...");
+    sLog->outString("Lade Skill Discovery Table...");
     LoadSkillDiscoveryTable();
 
-    sLog->outString("Loading Skill Extra Item Table...");
+    sLog->outString("Lade Skill Extra Item Table...");
     LoadSkillExtraItemTable();
 
-    sLog->outString("Loading Skill Fishing base level requirements...");
+    sLog->outString("Lade Skill Fishing base level requirements...");
     sObjectMgr->LoadFishingBaseSkillLevel();
 
-    sLog->outString("Loading Achievements...");
+    sLog->outString("Lade Achievements...");
     sAchievementMgr->LoadAchievementReferenceList();
-    sLog->outString("Loading Achievement Criteria Lists...");
+    sLog->outString("Lade Achievement Criteria Lists...");
     sAchievementMgr->LoadAchievementCriteriaList();
-    sLog->outString("Loading Achievement Criteria Data...");
+    sLog->outString("Lade Achievement Criteria Data...");
     sAchievementMgr->LoadAchievementCriteriaData();
-    sLog->outString("Loading Achievement Rewards...");
+    sLog->outString("Lade Achievement Rewards...");
     sAchievementMgr->LoadRewards();
-    sLog->outString("Loading Achievement Reward Locales...");
+    sLog->outString("Lade Achievement Reward Locales...");
     sAchievementMgr->LoadRewardLocales();
-    sLog->outString("Loading Completed Achievements...");
+    sLog->outString("Lade Completed Achievements...");
     sAchievementMgr->LoadCompletedAchievements();
 
     ///- Load dynamic data tables from the database
-    sLog->outString("Loading Item Auctions...");
+    sLog->outString("Lade Item Auctions...");
     sAuctionMgr->LoadAuctionItems();
-    sLog->outString("Loading Auctions...");
+    sLog->outString("Lade Auctions...");
     sAuctionMgr->LoadAuctions();
 
     sObjectMgr->LoadGuilds();
 
-    sLog->outString("Loading Guild Rewards...");
+    sLog->outString("Lade Guild Rewards...");
     sObjectMgr->LoadGuildRewards();
 
-    sLog->outString("Loading ArenaTeams...");
+    sLog->outString("Lade ArenaTeams...");
     sObjectMgr->LoadArenaTeams();
 
-    sLog->outString("Loading Groups...");
+    sLog->outString("Lade Groups...");
     sObjectMgr->LoadGroups();
 
-    sLog->outString("Loading ReservedNames...");
+    sLog->outString("Lade ReservedNames...");
     sObjectMgr->LoadReservedPlayersNames();
 
-    sLog->outString("Loading GameObjects for quests...");
+    sLog->outString("Lade GameObjects for quests...");
     sObjectMgr->LoadGameObjectForQuests();
 
-    sLog->outString("Loading GameTeleports...");
+    sLog->outString("Lade GameTeleports...");
     sObjectMgr->LoadGameTele();
 
     sObjectMgr->LoadGossipScripts();                             // must be before gossip menu options
 
-    sLog->outString("Loading Gossip menu...");
+    sLog->outString("Lade Gossip menu...");
     sObjectMgr->LoadGossipMenu();
 
-    sLog->outString("Loading Gossip menu options...");
+    sLog->outString("Lade Gossip menu options...");
     sObjectMgr->LoadGossipMenuItems();
 
-    sLog->outString("Loading Vendors...");
+    sLog->outString("Lade Vendors...");
     sObjectMgr->LoadVendors();                                   // must be after load CreatureTemplate and ItemTemplate
 
-    sLog->outString("Loading Trainers...");
+    sLog->outString("Lade Trainers...");
     sObjectMgr->LoadTrainerSpell();                              // must be after load CreatureTemplate
 
-    sLog->outString("Loading Waypoints...");
+    sLog->outString("Lade Waypoints...");
     sWaypointMgr->Load();
 
-    sLog->outString("Loading SmartAI Waypoints...");
+    sLog->outString("Lade SmartAI Waypoints...");
     sSmartWaypointMgr->LoadFromDB();
 
-    sLog->outString("Loading Creature Formations...");
+    sLog->outString("Lade Creature Formations...");
     formation_mgr->LoadCreatureFormations();
 
-    sLog->outString("Loading Conditions...");
+    sLog->outString("Lade Conditions...");
     sConditionMgr->LoadConditions();
 
-    sLog->outString("Loading faction change achievement pairs...");
+    sLog->outString("Lade faction change achievement pairs...");
     sObjectMgr->LoadFactionChangeAchievements();
 
-    sLog->outString("Loading faction change spell pairs...");
+    sLog->outString("Lade faction change spell pairs...");
     sObjectMgr->LoadFactionChangeSpells();
 
-    sLog->outString("Loading faction change item pairs...");
+    sLog->outString("Lade faction change item pairs...");
     sObjectMgr->LoadFactionChangeItems();
 
-    sLog->outString("Loading faction change reputation pairs...");
+    sLog->outString("Lade faction change reputation pairs...");
     sObjectMgr->LoadFactionChangeReputations();
 
-    sLog->outString("Loading GM tickets...");
+    sLog->outString("Lade GM tickets...");
     sTicketMgr->LoadGMTickets();
 
-    sLog->outString("Loading GM surveys...");
+    sLog->outString("Lade GM surveys...");
     sTicketMgr->LoadGMSurveys();
 
-    sLog->outString("Loading client addons...");
+    sLog->outString("Lade client addons...");
     sAddonMgr->LoadFromDB();
 
     ///- Handle outdated emails (delete/return)
     sLog->outString("Returning old mails...");
     sObjectMgr->ReturnOrDeleteOldMails(false);
 
-    sLog->outString("Loading Autobroadcasts...");
+    sLog->outString("Lade Autobroadcasts...");
     LoadAutobroadcasts();
 
     ///- Load and initialize scripts
@@ -1660,22 +1660,22 @@ void World::SetInitialWorldSettings()
     sObjectMgr->LoadEventScripts();                              // must be after load Creature/Gameobject(Template/Data)
     sObjectMgr->LoadWaypointScripts();
 
-    sLog->outString("Loading Scripts text locales...");      // must be after Load*Scripts calls
+    sLog->outString("Lade Scripts text locales...");      // must be after Load*Scripts calls
     sObjectMgr->LoadDbScriptStrings();
 
-    sLog->outString("Loading CreatureEventAI Texts...");
+    sLog->outString("Lade CreatureEventAI Texts...");
     sEventAIMgr->LoadCreatureEventAI_Texts();
 
-    sLog->outString("Loading CreatureEventAI Summons...");
+    sLog->outString("Lade CreatureEventAI Summons...");
     sEventAIMgr->LoadCreatureEventAI_Summons();
 
-    sLog->outString("Loading CreatureEventAI Scripts...");
+    sLog->outString("Lade CreatureEventAI Scripts...");
     sEventAIMgr->LoadCreatureEventAI_Scripts();
 
-    sLog->outString("Loading spell script names...");
+    sLog->outString("Lade spell script names...");
     sObjectMgr->LoadSpellScriptNames();
 
-    sLog->outString("Loading Creature Texts...");
+    sLog->outString("Lade Creature Texts...");
     sCreatureTextMgr->LoadCreatureTexts();
 
     sLog->outString("Initializing Scripts...");
@@ -1684,7 +1684,7 @@ void World::SetInitialWorldSettings()
     sLog->outString("Validating spell scripts...");
     sObjectMgr->ValidateSpellScripts();
 
-    sLog->outString("Loading SmartAI scripts...");
+    sLog->outString("Lade SmartAI scripts...");
     sSmartScriptMgr->LoadSmartAIFromDB();
 
     ///- Initialize game time and timers
@@ -1750,7 +1750,7 @@ void World::SetInitialWorldSettings()
 
     sTicketMgr->Initialize();
 
-    sLog->outString("Loading World States...");              // must be loaded before battleground and outdoor PvP
+    sLog->outString("Lade World States...");              // must be loaded before battleground and outdoor PvP
     LoadWorldStates();
 
     ///- Initialize Battlegrounds
@@ -1762,10 +1762,10 @@ void World::SetInitialWorldSettings()
     sLog->outString("Starting Outdoor PvP System");
     sOutdoorPvPMgr->InitOutdoorPvP();
 
-    sLog->outString("Loading Transports...");
+    sLog->outString("Lade Transports...");
     sMapMgr->LoadTransports();
 
-    sLog->outString("Loading Transport NPCs...");
+    sLog->outString("Lade Transport NPCs...");
     sMapMgr->LoadTransportNPCs();
 
     sLog->outString("Deleting expired bans...");
@@ -1882,7 +1882,7 @@ void World::LoadAutobroadcasts()
 
     if (!result)
     {
-        sLog->outString(">> Loaded 0 autobroadcasts definitions. DB table `autobroadcast` is empty!");
+        sLog->outString(">> Geladen 0 autobroadcasts definitions. DB table `autobroadcast` is empty!");
         sLog->outString();
         return;
     }
@@ -1900,7 +1900,7 @@ void World::LoadAutobroadcasts()
     }
     while (result->NextRow());
 
-    sLog->outString(">> Loaded %u autobroadcasts definitions in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
+    sLog->outString(">> Geladen %u autobroadcasts definitions in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
     sLog->outString();
 }
 
@@ -2864,7 +2864,7 @@ void World::LoadWorldStates()
 
     if (!result)
     {
-        sLog->outString(">> Loaded 0 world states. DB table `worldstates` is empty!");
+        sLog->outString(">> Geladen 0 world states. DB table `worldstates` is empty!");
         sLog->outString();
         return;
     }
@@ -2880,7 +2880,7 @@ void World::LoadWorldStates()
     }
     while (result->NextRow());
 
-    sLog->outString(">> Loaded %u world states in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
+    sLog->outString(">> Geladen %u world states in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
     sLog->outString();
 }
 

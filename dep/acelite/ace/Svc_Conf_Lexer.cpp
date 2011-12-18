@@ -242,7 +242,7 @@ ACE_Svc_Conf_Lexer::input (ACE_Svc_Conf_Param* param,
             }
           else
             {
-              ACE_OS::fprintf (stderr, "ERROR: input in scanner failed\n");
+              ACE_OS::fprintf (stderr, "Fehler: input in scanner failed\n");
               ACE_OS::exit (2);
             }
         }

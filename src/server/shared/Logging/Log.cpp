@@ -494,7 +494,7 @@ void Log::outError(const char * err, ...) {
 	fprintf(stderr, "\n");
 	if (logfile) {
 		outTimestamp(logfile);
-		fprintf(logfile, "ERROR: ");
+		fprintf(logfile, "Fehler: ");
 
 		va_start(ap, err);
 		vfprintf(logfile, err, ap);
@@ -567,7 +567,7 @@ void Log::outErrorDb(const char * err, ...) {
 
 	if (logfile) {
 		outTimestamp(logfile);
-		fprintf(logfile, "ERROR: ");
+		fprintf(logfile, "Fehler: ");
 
 		va_start(ap, err);
 		vfprintf(logfile, err, ap);

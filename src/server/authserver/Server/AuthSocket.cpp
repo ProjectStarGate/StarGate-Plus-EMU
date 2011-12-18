@@ -746,7 +746,7 @@ bool AuthSocket::_HandleReconnectChallenge() {
 	// Stop if the account is not found
 	if (!result) {
 		sLog->outError(
-				"[ERROR] user %s tried to login and we cannot find his session key in the database.",
+				"Fehler: user %s tried to login and we cannot find his session key in the database.",
 				_login.c_str());
 		socket().shutdown();
 		return false;
@@ -809,7 +809,7 @@ bool AuthSocket::_HandleReconnectProof() {
 		_authed = true;
 		return true;
 	} else {
-		sLog->outError("[ERROR] user %s tried to login, but session invalid.",
+		sLog->outError("Fehler: user %s tried to login, but session invalid.",
 				_login.c_str());
 		socket().shutdown();
 		return false;
@@ -832,7 +832,7 @@ bool AuthSocket::_HandleRealmList() {
 	PreparedQueryResult result = LoginDatabase.Query(stmt);
 	if (!result) {
 		sLog->outError(
-				"[ERROR] user %s tried to login and we cannot find him in the database.",
+				"Fehler: user %s tried to login and we cannot find him in the database.",
 				_login.c_str());
 		socket().shutdown();
 		return false;
