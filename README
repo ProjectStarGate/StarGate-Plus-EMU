@@ -9,32 +9,59 @@ Allgemeine Neuerungen
 - Abyssisches Seepferdchen (Core Fix)
 - Vashj'ir Gebiet nun teilweise bespawnt
 - Vashj'ir NPC Fix (Fraktions Fix)
-- Creature Update
-- Vendors Update
-- GObjects Fix
+- Creature (Update)
+- Vendors (Update)
+- GameObjects (Fix/Update)
 - Quest Fix (Aus BugTracker)
-- Todesritter Startgebiet Fix
+- Todesritter Startgebiet (Fix)
+- Vehicle-System (Fix/Update)
+- Geist-Mode-System (Update)
+- Zauber-System-Chain (Update)
+- BF/Wintergrasp (Update/Fix)
+- BG/Insel der Eroberung (Fix)
+- Totem-Systewm  (Update/Fix)
+- Chat/Channel-System (Update)
+
+
+Auras
+
+- Aura 338 (Fix)
+- Aura 345 (Fix)
 
 
 Charakter Neuerungen
 
 Magier :
 - Wasserelementar (Zauber-Fix)
+- Druckwelle (Zauber-Fix)
 
 Paladin:
 - Grundmana (Core Fix)
+- Heilige-Kraft-Regeneration (Core Fix)
 - Weihe (Zauber-Fix)
+- Refugium (Zauber-Fix Step 1)
+- Richturteil des Befehls (Zauber-Fix)
+- Schild der Rechtschaffenen (Zauber-Fix Step 1)
+- Göttlicher Sturm (Zauber-Fix)
+- Segen der Macht (Zauber-Update)
+- Segen der Könige (Zauber-Update)
+
 
 Jäger:
 - Schlangengift (Zauber-Fix)
 
 
 Krieger:
-- Siegesrausch (Zauber-Fix)
+- Siegesrausch (Zauber-Fix Step 1)
 - Siegreich (Zauber-Fix)
 - Zerschmettern (Zauber-Fix)
 - Unhöfliche Unterbrechung (Zauber-Fix)
-
+- Spalten (Zauber-Fix)
+- Abfangen (Zauber-Fix)
+- Hinrichten (Zauber-Fix)
+- Heldenhafter Stoß (Zauber-Fix)
+- Schockwelle (Zauber-Fix)
+- Donnerknall (Zauber-Fix)
 
 Hexenmeister:
 - Omen der Verdammnis (Zauber-Fix)
@@ -44,11 +71,33 @@ Hexenmeister:
 
 Todesritter:
 - Unaufhaltsamer Tod (Zauber-Fix)
+- Unheilige Raserei (Zauber-Fix Step 1)
+- Totenerweckung (Zauber-Fix)
 
 
 Priester:
 - Lichtbrunnen (Zauber-Fix)
+- Gedankenexplosion (Zauber-Fix)
+- Schattenwort-Tod (Zauber-Fix)
+- Gedankenschlag (Zauber-Fix)
+- Machtwort-Seelenstärke (Zauber-Fix)
 
+
+Druide:
+- Schnelle Fluggestalt (Zauber-Fix)
+- Anregen (Zauber-Fix)
+
+Schamane:
+- Elementarer Schwur (Zauber-Update)
+
+
+Weitere Zauber:
+
+- Totem des Erdelementars (Zauber-Fix) 
+- Totem des Feuerelementars (Zauber-Fix) 
+- Antimagisches Feld (Zauber-Fix)
+- Runenverzierte Heiltrankeinspritzung (Zauber-Fix)
+- Geisterpfoten (Zauber-Fix)
 
 Instanz Neuerungen
 
