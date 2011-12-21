@@ -1392,6 +1392,16 @@ void Creature::DeleteFromDB() {
 			m_DBTableGuid);
 	WorldDatabase.CommitTransaction(trans);
 }
+bool Creature::IsInvisibleDueToDespawn() const
+{
+    if (Unit::IsInvisibleDueToDespawn())
+        return true;
+
+    if (isAlive() || m_corpseRemoveTime > time(NULL))
+        return false;
+
+    return true;
+}
 
 bool Creature::isVisibleForInState(WorldObject const* seer) const {
 	if (!Unit::isVisibleForInState(seer))
